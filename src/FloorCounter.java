@@ -4,17 +4,15 @@ import java.util.Scanner;
 public class FloorCounter {
 
     public static int getMaxFloor(int apartmentNum) {
-        var macLvl = apartmentNum / 3;
-        if (apartmentNum % 3 > 0) {
+        var macLvl = apartmentNum / 4;
+        if (apartmentNum % 4 > 0) {
             return macLvl + 1;
         } else {
             return macLvl;
         }
     }
 
-    public static void main(String[] args) throws IOException {
-        var fc = new FloorCounter();
-
+    public static void main(String[] args) throws  IOException {
         System.out.println("Enter the number of floors: ");
         try (var scanner = new Scanner(System.in)){
             int apartmentNum = scanner.nextInt();
